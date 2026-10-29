@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agunglaras | Videographer & Editor</title>
+<meta name="description" content="agunglaras: your frame, your story. Videographer and editor for social media content, promotional and branding videos, event documentation and color grading.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a; --surf:#131313; --line:#262626; --grid:rgba(255,255,255,.045);
+  --text:#f5f5f2; --muted:#a8a8a3; --wa:#5cbf4a; --wa-h:#74d162;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h2{font-size:clamp(30px,4.6vw,48px);line-height:1.1;letter-spacing:-.02em;margin:0 0 40px;font-weight:600}
+h2 em{font-style:normal;color:var(--muted)}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(10,10,10,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{display:block;font-size:21px;line-height:1;letter-spacing:-.01em;font-weight:700}
+.brand small{display:block;font-size:11px;color:var(--muted);letter-spacing:.04em;margin-top:3px}
+nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:var(--muted);text-decoration:none;font-weight:500;font-size:15px}
+nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:inherit}
+.btn.wa{background:var(--wa);color:#0a1a07}
+.btn.wa:hover{background:var(--wa-h)}
+.btn.ghost{border-color:#6a6a66;color:var(--text);background:transparent}
+.btn.ghost:hover{border-color:var(--text)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+nav a.btn{min-height:44px;padding:0 18px;font-size:15px;color:#0a1a07;margin-left:8px}
+
+/* hero */
+.hero{padding:88px 0 56px}
+.hero .grid2{display:flex;gap:56px;flex-wrap:wrap;align-items:center}
+.hero .copy{flex:1 1 460px;min-width:0}
+.hero .pic{flex:1 1 360px;min-width:0;aspect-ratio:4/3;border:1px solid var(--line);border-radius:14px;background:var(--surf);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;overflow:hidden}
+.hero .pic img{width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:clamp(38px,6.4vw,76px);line-height:1.08;letter-spacing:-.025em;margin:0 0 28px;font-weight:500;font-style:italic}
+.hero h1 b{font-weight:700}
+.hero p.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:34em;margin:0 0 32px}
+.hero p.lead b{color:var(--text);font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 0;background:rgba(10,10,10,.7)}
+.stat b{display:block;font-size:clamp(40px,5vw,60px);line-height:1;font-weight:600;letter-spacing:-.02em}
+.stat span{display:block;margin-top:8px;color:var(--muted);font-size:16px}
+
+/* video frames */
+.frame{position:relative;width:100%;background:var(--surf);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:block;padding:0;color:inherit;font:inherit;text-align:left}
+.frame.r169{aspect-ratio:16/9}
+.frame.r916{aspect-ratio:9/16}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame .ph{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding:14px;font-size:12px;color:var(--muted);letter-spacing:.04em}
+.play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transition:transform .15s;box-shadow:0 4px 18px rgba(0,0,0,.5)}
+.play svg{width:24px;height:24px;margin-left:3px;fill:#0a0a0a}
+button.frame{cursor:pointer}
+button.frame:hover .play{transform:scale(1.08)}
+button.frame:hover{border-color:#777}
+
+/* work */
+.shorts{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:28px 20px;margin:0 0 56px}
+.long{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px 24px}
+.card h3{font-size:17px;margin:14px 0 2px;font-weight:600}
+.card p{margin:0;color:var(--muted);font-size:14px;font-style:italic}
+.sub{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 20px;font-weight:600}
+
+/* services */
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.svc li{background:rgba(19,19,19,.9);border:1px solid var(--line);border-radius:14px;padding:28px 24px}
+.svc .n{font-size:14px;color:var(--muted);margin-bottom:28px;display:block}
+.svc h3{margin:0;font-size:21px;line-height:1.3;font-weight:600}
+
+/* tools + clients */
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.chips li{border:1.5px solid var(--line);background:rgba(19,19,19,.85);border-radius:999px;padding:10px 20px;font-weight:500;font-size:15px}
+.lead2{color:var(--muted);max-width:40em;margin:-16px 0 28px}
+.lead2 b{color:var(--text)}
+.clients li{border-radius:10px;padding:14px 22px;font-weight:600}
+.clients img{height:36px;width:auto}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.quotes figure{margin:0;border:1px solid var(--line);background:rgba(19,19,19,.9);border-radius:14px;padding:28px 26px}
+.quotes blockquote{margin:0 0 20px;font-style:italic;color:#d6d6d1;font-size:16px}
+.quotes figcaption{font-weight:600;font-size:15px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.gal figure{margin:0}
+.gal .im{aspect-ratio:3/4;background:var(--surf);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;text-align:center;padding:12px}
+.gal.bts .im{aspect-ratio:4/3}
+.gal .im img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{margin-top:10px;font-size:14px;color:var(--muted);font-style:italic}
+
+/* contact */
+.contact{border-top:1px solid var(--line);text-align:center;background:rgba(10,10,10,.75)}
+.contact h2{font-size:clamp(34px,6vw,64px);font-style:italic;font-weight:500;margin-bottom:32px}
+.contact .cta{justify-content:center}
+.meta{margin:40px 0 0;display:flex;justify-content:center;gap:8px 32px;flex-wrap:wrap;color:var(--muted);font-size:15px}
+.meta a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.meta a:hover{color:var(--text)}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px;background:rgba(10,10,10,.9)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:none}
+
+/* dialog */
+dialog{border:0;padding:0;background:transparent;width:min(1000px,94vw);max-width:none;overflow:visible}
+dialog::backdrop{background:rgba(0,0,0,.88)}
+.player{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;margin:0 auto}
+.player.tall{aspect-ratio:9/16;width:min(380px,86vw,calc((100vh - 120px)*9/16))}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.close{position:absolute;right:0;top:-56px;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid #888;background:transparent;color:var(--text);font:600 15px Inter,sans-serif;cursor:pointer}
+.close:hover{border-color:#fff}
+.ytlink{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:12px;color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
+.ytlink:hover{color:var(--text)}
+.hidden{display:none!important}
+@media(max-width:560px){section{padding:68px 0}.hero{padding-top:56px}.play{width:54px;height:54px;margin:-27px 0 0 -27px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.play{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="agunglaras, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 17h30v18a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" fill="#f5f5f2"/><path d="M4.2 8.3 33 3l1.2 6.2L5.4 14.5z" fill="#f5f5f2"/><path d="m9.4 7.4 4.1 5.9M16.5 6 20.6 12M23.6 4.7l4.1 5.9" stroke="#0a0a0a" stroke-width="2.6" fill="none"/></svg>
+      <span><b>agunglaras</b><small>your frame, your story</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#tools">Tools</a>
+      <a class="btn wa" href="#contact">Hire me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="grid2">
+        <div class="copy">
+          <h1>crafting <b>stories</b>,<br>creating lasting <b>impressions</b><br>for you</h1>
+          <p class="lead">I'm agunglaras, a videographer &amp; editor dedicated to creating impactful, emotionally resonant audiovisual content for <b>personal, business, and creative needs</b>.</p>
+          <div class="cta">
+            <a class="btn wa wa-link hidden" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.3.1.8-.2 1.3z"/></svg>Chat on WhatsApp</a>
+            <a class="btn ghost" href="#work">See my work</a>
+          </div>
+        </div>
+        <div class="pic" id="heroPic">[ADD A HERO PHOTO]</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>2022</b><span>Since</span></div>
+      <div class="stat"><b>95%</b><span>Customer satisfaction</span></div>
+      <div class="stat"><b>1100+</b><span>Videos produced</span></div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>a glimpse of my work&hellip;</h2>
+      <p class="sub">Short-form</p>
+      <div class="shorts" id="shorts"></div>
+      <p class="sub">Long-form</p>
+      <div class="long" id="long"></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>services</h2>
+      <ul class="svc">
+        <li><span class="n">01</span><h3>Social media content: Reels, TikTok, Shorts, YouTube and more</h3></li>
+        <li><span class="n">02</span><h3>Promotional &amp; branding videos: corporate, event, product</h3></li>
+        <li><span class="n">03</span><h3>Documentation &amp; special event videos</h3></li>
+        <li><span class="n">04</span><h3>Color grading</h3></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="wrap">
+      <h2>trusted by</h2>
+      <ul class="chips clients" id="clientList"></ul>
+      <h2 style="margin-top:72px">from my clients&hellip;</h2>
+      <div class="quotes" id="quotes"></div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="wrap">
+      <h2>my production tools,</h2>
+      <p class="lead2">I use a variety of applications to <b>enhance the quality</b> of my videos and <b>improve efficiency</b> during the editing process.</p>
+      <ul class="chips" id="toolsList"></ul>
+    </div>
+  </section>
+
+  <section id="more">
+    <div class="wrap">
+      <h2>my graphic works</h2>
+      <div class="gal" id="graphics"></div>
+      <h2 style="margin-top:72px">behind the scenes</h2>
+      <div class="gal bts" id="bts"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>visualize your imagination</h2>
+      <div class="cta">
+        <a class="btn wa wa-link hidden" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.3.1.8-.2 1.3z"/></svg>Chat on WhatsApp</a>
+        <a class="btn ghost" id="mailBtn" href="#">E-mail me</a>
+      </div>
+      <div class="meta" id="meta"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr"></span> agunglaras &middot; <span data-site="name"></span></span>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-label="Video player">
+  <button class="close" id="closeBtn" type="button">Close &times;</button>
+  <div class="player" id="player"></div>
+  <a class="ytlink" id="ytLink" href="#" target="_blank" rel="noopener">Open on YouTube &nearr;</a>
+</dialog>
+
+<script>
+/* ============================================================
+   EDIT THIS BLOCK ONLY. Everything else updates automatically.
+   - Paste normal YouTube links (watch, youtu.be or shorts).
+   - Leave a link as "" to show an empty placeholder.
+   - Images: put the files in an "images" folder next to
+     index.html and write e.g. "images/poster1.jpg".
+   ============================================================ */
+const SITE = {
+  name: "Stephanus Laras Agung",
+  email: "agunglarasggmu@gmail.com",
+  whatsapp: "6282334230008",               // digits only with country code (62 replaces the leading 0)
+  linkedin: "https://www.linkedin.com/in/stephanuslaras",
+  facebook: "",                            // full link
+  heroImage: "",                           // e.g. "images/hero.jpg"
+
+  // vertical videos (YouTube Shorts)
+  // Replace each "[Project title]" and "[your role]" (e.g. "editing", "directing, videographer, editing")
+  shorts: [
+    { title: "Xinxun · USB WiFi", note: "generated with Google Flow & ChatGPT", url: "https://youtube.com/shorts/i8WAlfbODPI" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/IJawcR5IOOI" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/kkPhHLYIzW8" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/SXwnXrjgvCg" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/UQeYRx8Uo2Q" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/oaDscstG6GQ" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/Gsqx5cLwZKU" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/j4RZa3tjZQ8" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtube.com/shorts/zSMQR7go2Ow" }
+  ],
+  // horizontal videos
+  videos: [
+    { title: "[Project title]", note: "[your role]", url: "https://youtu.be/lr_tsHZF2LI" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtu.be/-r2vcAnpPmY" },
+    { title: "[Project title]", note: "[your role]", url: "https://youtu.be/TAUcmKMxQ2Q" }
+  ],
+
+  clients: [
+    { name: "Universitas Jember", logo: "" },
+    { name: "SDK Maria Fatima",   logo: "" },
+    { name: "Sukses Mulya",       logo: "" },
+    { name: "Kecemedia",          logo: "" },
+    { name: "Krya",               logo: "" },
+    { name: "Yifang C.M.E.",      logo: "" },
+    { name: "Postwork",           logo: "" }
+  ],
+
+  testimonials: [
+    { by: "LP2M UNEJ",   text: "Proyek kami mengalami kendala teknis di menit-menit terakhir, tetapi Mas Stephanus bisa mengambil alih dengan sangat baik sebagai editor sekaligus director. Dia memastikan setiap detail tetap berjalan sesuai rencana dan memberikan solusi cepat untuk hasil yang optimal." },
+    { by: "Sukses Mulya", text: "Kami puas dengan hasil editing dari evan. Video yang dikerjakan memiliki kualitas visual yang tajam, transisi yang halus, serta storytelling yang kuat. Profesionalisme dan ketepatan waktu dalam pengerjaan juga menjadi nilai tambah bagi kami." },
+    { by: "Krya",         text: "We were impressed by how Evan handled the editing process. He refined every detail, ensuring the video was engaging and visually appealing. Their ability to enhance raw footage into a polished final product is outstanding!" },
+    { by: "Rizky",        text: "Josss rek! Videoku diedit sama Evan, hasilnya maknyusss! Transisi ne alus, warnane cerah, pokoke manteb pol!" }
+  ],
+
+  tools: ["Adobe Premiere Pro", "Adobe Photoshop", "Adobe Audition", "DaVinci Resolve", "Canva", "CapCut", "OpenAI", "Copilot", "Adobe Firefly", "Perplexity", "NVIDIA Broadcast"],
+
+  // graphic works: add "image" files when ready
+  graphics: [
+    { caption: "Poster: SDK Maria Fatima, Adventure",           image: "" },
+    { caption: "Poster: SMI School, Open Enrollment",           image: "" },
+    { caption: "Poster: SDK Maria Fatima, Pre-Competition Concert", image: "" }
+  ],
+  // behind the scenes photos
+  bts: ["", "", "", "", ""]
+};
+/* ============================================================ */
+
+(function () {
+  var PLAY = '<span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>';
+
+  function ytId(s) {
+    if (!s) return "";
+    var m = String(s).match(/(?:v=|youtu\.be\/|embed\/|shorts\/|live\/)([\w-]{11})/);
+    if (m) return m[1];
+    return /^[\w-]{11}$/.test(s) ? s : "";
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function frame(url, label, tall) {
+    var id = ytId(url), cls = "frame " + (tall ? "r916" : "r169");
+    if (!id) return '<div class="' + cls + '">' + PLAY + '<span class="ph">[ADD YOUTUBE LINK]</span></div>';
+    return '<button class="' + cls + '" type="button" data-yt="' + id + '"' + (tall ? ' data-tall="1"' : '') +
+      ' aria-label="Play video: ' + esc(label) + '"><img loading="lazy" src="https://i.ytimg.com/vi/' + id +
+      '/hqdefault.jpg" alt="">' + PLAY + '</button>';
+  }
+  function card(v, tall) {
+    return '<article class="card">' + frame(v.url, v.title, tall) + '<h3>' + esc(v.title) + '</h3><p>' + esc(v.note) + '</p></article>';
+  }
+  function $(id) { return document.getElementById(id); }
+
+  document.querySelectorAll("[data-site]").forEach(function (el) {
+    var v = SITE[el.getAttribute("data-site")]; if (v) el.textContent = v;
+  });
+  $("yr").textContent = new Date().getFullYear();
+
+  // hero image
+  if (SITE.heroImage) $("heroPic").innerHTML = '<img src="' + esc(SITE.heroImage) + '" alt="">';
+
+  // whatsapp
+  var wa = String(SITE.whatsapp || "").replace(/\D/g, "");
+  document.querySelectorAll(".wa-link").forEach(function (a) {
+    if (wa) { a.href = "https://wa.me/" + wa; a.classList.remove("hidden"); }
+  });
+
+  // work
+  $("shorts").innerHTML = SITE.shorts.map(function (v) { return card(v, true); }).join("");
+  $("long").innerHTML = SITE.videos.map(function (v) { return card(v, false); }).join("");
+
+  // clients, quotes, tools
+  $("clientList").innerHTML = SITE.clients.map(function (c) {
+    return "<li>" + (c.logo ? '<img src="' + esc(c.logo) + '" alt="' + esc(c.name) + '">' : esc(c.name)) + "</li>";
+  }).join("");
+  $("quotes").innerHTML = SITE.testimonials.map(function (t) {
+    return "<figure><blockquote>&ldquo;" + esc(t.text) + "&rdquo;</blockquote><figcaption>&ndash; " + esc(t.by) + "</figcaption></figure>";
+  }).join("");
+  $("toolsList").innerHTML = SITE.tools.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("");
+
+  // galleries
+  $("graphics").innerHTML = SITE.graphics.map(function (g) {
+    return "<figure><div class=\"im\">" + (g.image ? '<img loading="lazy" src="' + esc(g.image) + '" alt="' + esc(g.caption) + '">' : "[ADD IMAGE]") +
+      "</div><figcaption>" + esc(g.caption) + "</figcaption></figure>";
+  }).join("");
+  $("bts").innerHTML = SITE.bts.map(function (src) {
+    return "<figure><div class=\"im\">" + (src ? '<img loading="lazy" src="' + esc(src) + '" alt="Behind the scenes">' : "[ADD PHOTO]") + "</div></figure>";
+  }).join("");
+
+  // contact
+  $("mailBtn").href = "mailto:" + SITE.email;
+  var meta = '<a href="mailto:' + esc(SITE.email) + '">' + esc(SITE.email) + "</a>";
+  if (SITE.linkedin) meta += '<a href="' + esc(SITE.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a>';
+  if (SITE.facebook) meta += '<a href="' + esc(SITE.facebook) + '" target="_blank" rel="noopener">Facebook</a>';
+  $("meta").innerHTML = meta;
+
+  // video dialog
+  var dlg = $("dlg"), player = $("player"), lastBtn = null;
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-yt]");
+    if (b) {
+      lastBtn = b;
+      player.className = "player" + (b.hasAttribute("data-tall") ? " tall" : "");
+      $("ytLink").href = "https://www.youtube.com/watch?v=" + b.getAttribute("data-yt");
+      player.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + b.getAttribute("data-yt") +
+        '?autoplay=1&rel=0" referrerpolicy="strict-origin-when-cross-origin" title="Video player" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      dlg.showModal();
+    } else if (e.target === dlg) { dlg.close(); }
+  });
+  $("closeBtn").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("close", function () { player.innerHTML = ""; if (lastBtn) lastBtn.focus(); });
+})();
+</script>
+</body>
+</html>
